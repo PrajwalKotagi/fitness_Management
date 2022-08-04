@@ -1,0 +1,330 @@
+
+{%csrf_token %}
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Fitness Management  | Gallery</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/static/web/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="/index/">
+                    <img src="/static/web/images/gymnasium.png" alt="" width="80" height="80" style="border-radius:50px;">
+                </a>
+            </div>
+          
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li ><a href="/index/">Home</a></li>
+                            <li><a href="/about-us/">About us</a></li>
+							<li><a href="/package/">Packages</a></li>
+                            <li><a href="/schedule/">Schedule</a></li>
+                            <li class="active"><a href="/gallery/">Gallery</a></li>
+                            <li><a href="/video/">Videos</a></li>
+                            <li><a href="/contact/">Contacts</a></li>
+                            <li><a href="/login/">Login</a></li>
+                            <li><a href="/register/">Register</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="/static/web/images/about-bread.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Our Gallery</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="#"><i class="fa fa-home"></i> Home</a>
+                            <span>Gallery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- Gallery Section Begin -->
+    <section class="gallery-section spad">
+        <div class="container">
+            
+            <div class="row gallery-filter">
+                <div class="col-lg-4 col-sm-6 mix crossfit workout">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery1.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery1.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout gym">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery2.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery2.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery3.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery3.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix gym">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery4.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery4.jpg" class="image-popup"><i
+                                        class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix crossfit">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery5.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery5.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix gym crossfit">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery6.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery6.jpg" class="image-popup"><i
+                                        class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery7.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery7.jpg" class="image-popup"><i
+                                        class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix crossfit gym">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery8.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery8.jpg" class="image-popup"><i
+                                        class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix crossfit gym workout">
+                    <div class="gallery-item">
+                        <img src="/static/web/images/gallery/gallery9.jpg"" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="/static/web/images/gallery/gallery9.jpg" class="image-popup"><i
+                                        class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a Bodyweight Workout <span>SWEAT || PAIN || BLEED</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+<!-- Fitness Products Starts -->
+<section class="gallery-section">
+    <div class="container  ">
+        <h2 class="text-center my-5 text-white fw-bold">Our Gym Equipments</h2>
+        <div class="row" id="fitness">
+            
+            
+        </div>
+    </div>
+</section>
+
+<!-- Fitness Products End -->
+<!--  Products Starts -->
+<section class="gallery-section">
+    <div class="container mt-5 ">
+        <h2 class="text-center my-5 text-white  fw-bold">Fitness Foods</h2>
+        <div class="row" id="food" >
+            
+           
+        </div>
+    </div>
+</section>
+
+<!--  Products End -->
+    <!-- Cta Section Begin -->
+    <section class="cta-section set-bg"  data-setbg="/static/web/images/classes-title-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cta-text">
+                        <h3>GeT Started Today</h3>
+                        <p>Contact for more Details</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cta Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo-item">
+                                        
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a  href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://twitter.com/login" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://accounts.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" ></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/static/web/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/web/js/bootstrap.min.js"></script>
+    <script src="/static/web/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/web/js/mixitup.min.js"></script>
+    <script src="/static/web/js/jquery.nice-select.min.js"></script>
+    <script src="/static/web/js/jquery.slicknav.js"></script>
+    <script src="/static/web/js/owl.carousel.min.js"></script>
+    <script src="/static/web/js/masonry.pkgd.min.js"></script>
+    <script src="/static/web/js/main.js"></script>
+</body>
+
+</html>
+<script>
+      function getEquipments() {
+
+var formData = new FormData();
+formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+
+$.ajax({
+
+    url: "/get_equipments/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+      for(var i = 0; i < response.length; i++) {
+	let imgSub = response[i].ep_image.substring(3);
+
+        $("#fitness").append('<div class="col-md-4 my-4"> <div class="card" style="width: 18rem;"> <img src="'+imgSub+'" class="card-img-top" alt="..." style="height:200px"> <div class="card-body"> <h5 class="card-title text-center">'+response[i].ep_name+'</h5> </div></div></div>');
+      }
+    },
+  });
+
+}
+getEquipments()
+
+
+// 
+function getProducts() {
+
+var formData = new FormData();
+formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+
+$.ajax({
+
+    url: "/get_Fitness_foods/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+      for(var i = 0; i < response.length; i++) {
+	let imgSub = response[i].pm_image.substring(3);
+
+        $("#food").append('<div class="col-md-4 my-5"> <div class="card" style="width: 18rem;"> <img src="'+imgSub+'" class="card-img-top" alt="..." style="height:200px;"> <div class="card-body"> <h5 class="card-title">'+response[i].pm_name+'</h5> <p class="card-text">'+response[i].pm_description+'</p></div></div></div>');
+      }
+    },
+  });
+
+}
+getProducts()
+</script>

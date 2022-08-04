@@ -1,0 +1,234 @@
+{%csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Trainer</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/static/admin/vendors/feather/feather.css">
+  <link rel="stylesheet" href="/static/admin/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="/static/admin/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="/static/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="/static/admin/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="/static/admin/text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/static/admin/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="/static/admin/images/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <!-- <a class="navbar-brand brand-logo mr-5" href="/index/"><img src="/static/web/images/india2.png" class="mr-2" alt="logo"/></a> -->
+        <!-- <a class="navbar-brand brand-logo-mini"  href="/index/"><img src="/static/web/images/logo.png" alt="logo" /></a> -->
+        <a href="#" style="color:#4B49AC;font-weight: bold">Fitness Management </a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+      
+       
+
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button> 
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+     
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas " id="sidebar">
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index_trainer/">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add_videos/">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Upload_videos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/manage_videos/">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Manage_videos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add_trainer_customer/">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Add_Customer_Details</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="/manage_trainer_customer/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Manage Customer_Details</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add_customer_health/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Add Health_Status</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/manage_customer_health/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Manage_Health_Status</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/diet_plan/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Diet Plan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/diet_byure/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Diet Byure</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin_login/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Log Out</span>
+            </a>
+          </li>
+         
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Welcome Trainer</h3>
+                </div>
+             
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg"> -->
+                <!-- <div class="card-people mt-auto">
+                  <img src="images/dashboard/people.svg" alt="people">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                      <div>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
+                      </div>
+                      <div class="ml-2">
+                        <h4 class="location font-weight-normal">Bangalore</h4>
+                        <h6 class="font-weight-normal">India</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+             <!--  </div>
+            </div> -->
+            <div class="col-md-12 grid-margin transparent">
+              <div class="row">
+                <div class="col-md-3 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">No.of Trainers</p>
+                      <p class="fs-30 mb-2">6</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">No.of Customers</p>
+                      <p class="fs-30 mb-2">3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">No.of Plans</p>
+                      <p class="fs-30 mb-2">40</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-md-3 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">No.of Events</p>
+                      <p class="fs-30 mb-2">10</p>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+             <!--  <div class="row"> -->
+                
+               
+              <!--  - -->
+            </div>
+          </div>
+         
+        
+        </div>
+        <!-- content-wrapper ends -->
+        <
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          
+          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="/static/admin/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="/static/admin/vendors/chart.js/Chart.min.js"></script>
+  <script src="/static/admin/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="/static/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="/static/admin/js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="/static/admin/js/off-canvas.js"></script>
+  <script src="/static/admin/js/hoverable-collapse.js"></script>
+  <script src="/static/admin/js/template.js"></script>
+  <script src="/static/admin/js/settings.js"></script>
+  <script src="/static/admin/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="/static/admin/js/dashboard.js"></script>
+  <script src="/static/admin/js/dashboard.js"></script>
+  <script src="/static/admin/js/dashboard.js"></script>
+  <script src="/static/admin/js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+

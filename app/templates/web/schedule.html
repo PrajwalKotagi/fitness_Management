@@ -1,0 +1,334 @@
+
+{%csrf_token %}
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Management  | Schedule</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/static/web/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="/index/">
+                    <img src="/static/web/images/gymnasium.png" alt="" width="80" height="80" style="border-radius:50px;">
+                </a>
+            </div>
+           
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li ><a href="/index/">Home</a></li>
+                            <li><a href="/about-us/">About us</a></li>
+							<li><a href="/package/">Packages</a></li>
+                            <li class="active"><a href="/schedule/">Schedule</a></li>
+                            <li><a href="/gallery/">Gallery</a></li>
+                            <li><a href="/video/">Videos</a></li>
+                            <li><a href="/contact/">Contacts</a></li>
+                            <li><a href="/login/">Login</a></li>
+                            <li><a href="/register/">Register</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="/static/web/images/about-bread.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>SCHEDULE</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="#"><i class="fa fa-home"></i> Home</a>
+                            <span>Schedule</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+<!-- Events start -->
+<section class="gallery-section">
+    <div class="container mt-5 ">
+        <h2 class="text-center my-5 text-white  fw-bold">Events</h2>
+        <div class="row" id="events" >
+            
+            
+           
+        </div>
+    </div>
+</section>
+<!-- Events End -->
+    <!-- Class Time Section Begin -->
+    <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Classtime Table</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">all class</li><br><br>
+                            <li data-tsfilter="crossfit">chest & triceps</li>
+                            <li data-tsfilter="lats & biceps">lats & biceps</li>
+                            <li data-tsfilter="shoulder & legs">shoulder & legs </li>
+                            <li data-tsfilter="triceps & abs">triceps & abs </li>
+                            <li data-tsfilter="back & shoulder"> back & shoulder</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="classtime-table">
+                    <table style="margin:45px">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="workout-time">07.00</td>
+                                <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                    <span>07.00 - 11.00</span>
+                                    <h6>chest & triceps</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                    <span>07.00 - 12.00</span>
+                                    <h6>chest & triceps</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="lats & biceps">
+                                    <span>07.00 - 10.00</span>
+                                    <h6>lats & biceps</h6>
+                                </td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="workout-time">11.00</td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="lats & biceps">
+                                    <span>11.00 - 03.00</span>
+                                    <h6>lats & biceps</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                    <span>11.00 - 04.00</span>
+                                    <h6>chest & triceps</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="triceps & abs">
+                                    <span>11.00 - 01.30</span>
+                                    <h6>triceps & abs</h6>
+                                </td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="workout-time">03.00</td>
+                                <td class="hover-bg ts-item" data-tsmeta="lats & biceps">
+                                    <span>03.00 - 06.00</span>
+                                    <h6>lats & biceps</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="back & shoulder">
+                                    <span>03.00 - 06.00</span>
+                                    <h6>back & shoulder</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="back & shoulder">
+                                    <span>03.00 - 06.00</span>
+                                    <h6>back & shoulder</h6>
+                                </td>
+                                <td class="hover-bg ts-item" data-tsmeta="shoulder & legs">
+                                    <span>03.00 - 05.00</span>
+                                    <h6>shoulder & legs</h6>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="workout-time">06.00</td>
+                                <td class="hover-bg ts-item" data-tsmeta="triceps & abs">
+                                    <span>06.00 - 08.00</span>
+                                    <h6>triceps & abs</h6>
+                                </td>
+                                <td class="hover-bg ts-item" data-tsmeta="shoulder & legs">
+                                    <span>06.00 - 08.00</span>
+                                    <h6>shoulder & legs</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="lats & biceps">
+                                    <span>06.00 - 08.00</span>
+                                    <h6>lats & biceps</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                    <span>06.00 - 08.00</span>
+                                    <h6>chest & triceps</h6>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="workout-time">08.00</td>
+                                <td class="hover-bg ts-item" data-tsmeta="lats & biceps">
+                                    <span>08.00 - 10.00</span>
+                                    <h6>lats & biceps</h6>
+                                </td>
+                                <td class="hover-bg ts-item" data-tsmeta="triceps & abs">
+                                    <span>08.00 - 10.00</span>
+                                    <h6>triceps & abs</h6>
+                                </td>
+                                <td class="hover-bg ts-item" data-tsmeta="triceps & abs">
+                                    <span>08.00 - 10.00</span>
+                                    <h6>triceps & abs</h6>
+                                </td>
+                                <td></td>
+                                <td class="hover-bg ts-item" data-tsmeta="crossfit">
+                                    <span>08.00 - 10.00</span>
+                                    <h6>chest & triceps</h6>
+                                </td>
+                                <td></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Class Time Section End -->
+<!-- Events starts -->
+
+<!-- Events End -->
+    
+
+    <!-- Cta Section Begin -->
+    <section class="cta-section set-bg"  data-setbg="/static/web/images/classes-title-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cta-text">
+                        <h3>GeT Started Today</h3>
+                        <p>Contact for more Details</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cta Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo-item">
+                                        
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a  href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://twitter.com/login" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://accounts.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" ></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/static/web/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/web/js/bootstrap.min.js"></script>
+    <script src="/static/web/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/web/js/mixitup.min.js"></script>
+    <script src="/static/web/js/jquery.nice-select.min.js"></script>
+    <script src="/static/web/js/jquery.slicknav.js"></script>
+    <script src="/static/web/js/owl.carousel.min.js"></script>
+    <script src="/static/web/js/masonry.pkgd.min.js"></script>
+    <script src="/static/web/js/main.js"></script>
+</body>
+
+</html>
+<script>
+    function getProducts() {
+
+var formData = new FormData();
+formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+
+$.ajax({
+
+    url: "/get_Events/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+      for(var i = 0; i < response.length; i++) {
+	let imgSub = response[i].em_image.substring(3);
+
+        $("#events").append('<div class="col-md-4"> <div class="card" style="width: 18rem;"> <img src="'+imgSub+'" class="card-img-top" alt="..." style="height:200px;"> <div class="card-body"> <h5 class="card-title">'+response[i].em_name+'</h5> <h5 class="card-title">Date :'+response[i].em_date+'</h5> <h5 class="card-title">Time :'+response[i].em_time+'</h5> <h5 class="card-title">Location :'+response[i].em_location+'</h5> <p class="card-text">'+response[i].em_description+'</div></div></div>');
+      }
+    },
+  });
+
+}
+getProducts()
+</script>

@@ -1,0 +1,313 @@
+{%csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/static/admin/vendors/feather/feather.css">
+  <link rel="stylesheet" href="/static/admin/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="/static/admin/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/static/admin/css/vertical-layout-light/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <!-- endinject -->
+  <!-- <link rel="shortcut icon" href="/static/admin/images/favicon.png" /> -->
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <!-- <a class="navbar-brand brand-logo mr-5" href="../../index.html"><img src="../../images/logo.svg" class="mr-2" alt="logo"/></a> -->
+        <!-- <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo"/></a> -->
+        <a href="#" style="color:#4B49AC;font-weight: bold"> Fitness Management </a>
+
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+
+
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+
+      <!-- partial -->
+      <!-- partial:../../partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/indexadmin/">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin_master/">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Admin Master</span>
+              <!-- <i class="menu-arrow"></i> -->
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/manage_master/">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Manage Admin-Master</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add_customer_details/">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Add_Customer_Details</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/manage_customer_details/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Manage Customer_Details</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add_health_status/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Add Health_Status</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/manage_health_status/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Manage_Health_Status</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/event_management/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Event Management</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/product_management/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Product Management</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/equipment_management/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Equipment Management</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/addplan/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Add Plan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/manage_plan/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Manage Plan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin_login/">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Log Out</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      
+      <div class="main-panel">
+        
+        <div class="content-wrapper">
+            <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add
+              </button>
+          <div class="row"> 
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                
+                <div class="card-body">
+                  <h4 class="card-title">Event Management</h4>
+
+                  <div class="table-responsive pt-3">
+                    <table class="table table-bordered" id="tableData">
+                      <thead>
+                        <tr>
+                          <th>SI NO</th>
+                          <th>Product Name</th>
+                          <th>Description</th>
+                          <th>Image</th>
+                          <th>Action</th>
+
+
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Event</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                
+                <div class="mb-3">
+                  <label for="exampleInputText" class="form-label">Product Name :</label>
+                  <input type="text" class="form-control" id="txtName" onkeypress="return alphaOnly(event);">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Description :</label>
+                    <textarea type="text" class="form-control" id="txtDescription" ></textarea>  
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleInputText" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="selImage">
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="btn_add">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Edit Modal -->
+  <div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Edit</h4>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+           <input type="hidden" id="edit_id">
+           <div class="mb-3">
+            <label for="exampleInputText" class="form-label">Event Name :</label>
+            <input type="text" class="form-control" id="txtName1" onkeypress="return alphaOnly(event);">
+          </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Description :</label>
+              <textarea type="text" class="form-control" id="txtDescription1" ></textarea>  
+            </div>
+          
+              <div class="col-12 text-center mt-3">
+                <button type="button" class="btn btn-success" id="btn_update">
+                  Update
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- delete -->
+<div class="modal fade" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" >Delete</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">
+          Are you sure you want to delete?
+        </p>
+      </div>
+    <input type="hidden" id="delete_id">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn_delete">Yes</button>
+        <button type="button" class="btn btn-primary">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+  <!-- plugins:js -->
+  <script src="/static/admin/vendors/js/vendor.bundle.base.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="/static/admin/js/off-canvas.js"></script>
+  <script src="/static/admin/js/hoverable-collapse.js"></script>
+  <script src="/static/admin/js/template.js"></script>
+  <script src="/static/admin/js/settings.js"></script>
+  <script src="/static/admin/js/todolist.js"></script>
+  <!-- <script src="/static/admin/js/jsmanageevents.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="/static/admin/js/jsProductManagement.js"></script>
+
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- End custom js for this page-->
+</body>
+
+</html>

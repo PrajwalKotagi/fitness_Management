@@ -1,0 +1,34 @@
+{% load static %}
+{% csrf_token %}
+{% static "" as baseURL %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness Management  - Thank You</title>
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="/static/web/css/bootstrap.css" />
+    <script src="{% static 'web_js/jquery-2.2.3.min.js' %}"></script>
+
+</head>
+<body class="">
+<main>
+    <section class="mb-3 d-flex text-center" style="height: 100vh; background-color: #2d6622;">
+        <div class="container d-flex m-auto">
+            <div class="row w-100 mb-2">
+                <div class="col-12">
+                <h2 class="text-white pb-4">Thank you for Booking!!!</h2>
+
+                <a class="btn btn-warning mb-2" href="/index/">
+                    Go to home page
+                    <i class="fa fa-window-restore"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>

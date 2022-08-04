@@ -1,0 +1,337 @@
+
+{%csrf_token %}
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Management  | Package</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/static/web/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/web/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="/index/">
+                    <img src="/static/web/images/gymnasium.png" alt="" width="80" height="80" style="border-radius:50px;">
+                </a>
+            </div>
+          
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li ><a href="/index/">Home</a></li>
+                            <li><a href="/about-us/">About us</a></li>
+							<li class="active"><a href="/package/">Packages</a></li>
+                            <li><a href="/schedule/">Schedule</a></li>
+                            <li><a href="/gallery/">Gallery</a></li>
+                            <li><a href="/video/">Videos</a></li>
+                            <li><a href="/contact/">Contacts</a></li>
+                            <li><a href="/login/">Login</a></li>
+                            <li><a href="/register/">Register</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+     
+
+    <!-- Price Plan Section Begin -->
+    <section class="price-section spad set-bg" data-setbg="/static/web/images/price-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>CHOOSE YOUR PRICING PLAN</h2>
+					</div>
+                    
+                </div>
+            </div>
+            <div class="row" id="packages">
+                <!-- <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>GENERAL</h4>
+                        <div class="price-plan">
+                            <h2>1500 <span>₹</span></h2>
+                            <p>Monthly</p>
+                        </div>
+                        <div class="price-plan">
+                            <h2>3500 <span>₹</span></h2>
+                            <p>Quarterly </p>
+                        </div>
+						<div class="price-plan">
+                            <h2>6500 <span>₹</span></h2>
+                            <p>Half-Yearly</p>
+                        </div>
+						<div class="price-plan">
+                            <h2>10000 <span>₹</span></h2>
+                            <p>Yearly</p>
+                        </div>
+						<div class="tic-text">
+                            <i class="fa fa-star"></i>
+                        </div>
+                     </div>
+                </div> -->
+                <!-- <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>COUPLE</h4>
+                        <div class="price-plan">
+                            <h2>2500 <span>₹</span></h2>
+                            <p>Monthly</p>
+                        </div>
+                        <div class="price-plan">
+                            <h2>6500 <span>₹</span></h2>
+                            <p>Quarterly </p>
+                        </div>
+						<div class="price-plan">
+                            <h2>11000 <span>₹</span></h2>
+                            <p>Half-Yearly</p>
+                        </div>
+						<div class="price-plan">
+                            <h2>18000 <span>₹</span></h2>
+                            <p>Yearly</p>
+                        </div>
+						<div class="tic-text">
+                            <i class="fa fa-star"></i>
+                        </div>
+                     </div>
+				</div> -->
+                <!-- <div class="col-lg-4">
+                    <div class="single-price-plan">
+                        <h4>HAPPY HOURS</h4>
+                        <div class="price-plan">
+                            <h2>1000 <span>₹</span></h2>
+                            <p>Monthly</p>
+                        </div>
+                        <div class="price-plan">
+                            <h2>2500 <span>₹</span></h2>
+                            <p>Quarterly </p>
+                        </div>
+						<div class="price-plan">
+                            <h2>4500 <span>₹</span></h2>
+                            <p>Half-Yearly</p>
+                        </div>
+						<div class="price-plan">
+                            <h2>7500 <span>₹</span></h2>
+                            <p>Yearly</p>
+                        </div>
+						<div class="tic-text">
+                            <i class="fa fa-star"></i>
+                        </div>
+                     </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- Price Plan Section End -->
+    <input type="hidden" id="txtID" value="{{request.GET.id}}">
+
+    <!-- Diet start -->
+    <section class="gallery-section">
+        <div class="container mt-5 ">
+            <h2 class="text-center my-5 text-white  fw-bold">Diet Plan</h2>
+            <div class="row" id="diet" >
+                
+               
+            </div>
+        </div>
+    </section>
+    <!-- Diet End -->
+
+    <!-- Cta Section Begin -->
+    <section class="cta-section set-bg"  data-setbg="/static/web/images/classes-title-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cta-text">
+                        <h3>GeT Started Today</h3>
+                        <p>Contact for more Details</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cta Section End -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Buy Now</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <input type="hidden" id="priceDetails" value="" >
+            <!-- <input type="hidden" id="carName" value="" > -->
+
+            <div class="form-group">
+              <label for="exampleInputText1">Name</label>
+              <input type="text" class="form-control" id="txtName" aria-describedby=""
+                placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputNumber1">Mobile Number</label>
+              <input type="text" class="form-control" id="txtMobileNo" placeholder="Mobile Number"onkeypress="return isNumberKey(event);" maxlength="10">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputNumber1">Location</label>
+              <input type="text" class="form-control" id="txtLocation" placeholder="Enter Location"onkeypress="return isNumberKey(event);" maxlength="10">
+            </div>
+           
+            
+            <button type="button" class="btn btn-primary btn-round px-5" id="btn_add" >Buy Now</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo-item">
+                                        
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a  href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://twitter.com/login" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://accounts.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" ></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/static/web/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/web/js/bootstrap.min.js"></script>
+    <script src="/static/web/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/web/js/mixitup.min.js"></script>
+    <script src="/static/web/js/jquery.nice-select.min.js"></script>
+    <script src="/static/web/js/jquery.slicknav.js"></script>
+    <script src="/static/web/js/owl.carousel.min.js"></script>
+    <script src="/static/web/js/masonry.pkgd.min.js"></script>
+    <script src="/static/web/js/main.js"></script>
+    <script src="/static/web/js/jsBuyDiet.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+
+</html>
+<script type="text/javascript">
+    function getData() {
+  // alert("Hi");
+  var formData = new FormData();
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("id", "batting");
+
+
+  $.ajax({
+
+      url: "/get_package/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+        for(var i = 0; i < response.length; i++) {
+          var j = i + 1;
+          // let image = response[i].mo_image.substring(3);
+          // console.log(image);
+
+          $("#packages").append('<div class="col-lg-4"> <div class="single-price-plan"> <h4>'+response[i].ae_name+'</h4> <div class="price-plan"> <h2>'+response[i].ae_price+' <span>₹</span></h2> <p>'+response[i].ae_month+'</p></div>');
+        }
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+
+      },
+    });
+
+}
+getData();
+
+
+// diet plan
+function getProducts() {
+
+var formData = new FormData();
+formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+
+$.ajax({
+
+    url: "/get_diet_plan/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+      for(var i = 0; i < response.length; i++) {
+	let imgSub = response[i].dp_image.substring(3);
+
+        $("#diet").append('<div class="col-md-4 my-5"> <div class="card" style="width: 18rem;"> <img src="'+imgSub+'" class="card-img-top" alt="..." style="height:200px;"> <div class="card-body"> <h5 class="card-title text-center">'+response[i].dp_name+'</h5> <p class="card-text text-center">'+'₹'+response[i].dp_price+'</p> <button type="button" class="btn btn-outline-dark my-2 d-flex justify-content-center" data-toggle="modal" data-target="#exampleModal"  onclick="getAmount('+response[i].dp_price+')"> Buy Now </button></div></div></div>');
+      }
+    },
+  });
+
+}
+getProducts()
+function getAmount(amount) {
+    $("#priceDetails").val(amount)
+}
+</script>

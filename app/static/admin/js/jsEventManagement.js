@@ -1,0 +1,299 @@
+function validateEmail(paramEmailID) {
+    var filter = /^[0-9a-z.]+\@[a-z0-9]+\.[a-zA-z0-9]{2,4}$/;
+
+    if (filter.test(paramEmailID)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function alphaOnly(event) {
+    var key = event.which ? event.which : event.keyCode;
+    return (
+        (key >= 65 && key <= 90) ||
+        key == 8 ||
+        (event.charCode >= 97 && event.charCode <= 122) ||
+        event.charCode == 32
+    );
+}
+
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+// alert("Hello");
+
+$("#btn_add").click(function (e) {
+    //verification
+
+    if ($("#txtName").val().trim().length < 1) {
+        alert("Please Enter  Name");
+        $("#txtName").focus();
+        return false;
+    }
+
+    if ($("#txtDate").val().trim().length < 1) {
+        alert("Please Enter Date");
+        $("#txtDate").focus();
+        return false;
+    }
+
+    if ($("#txtTime").val() == "") {
+        alert("Please Enter Time");
+        $("#txtTime").focus();
+        return false;
+    }
+    if ($("#txtLocation").val() == "") {
+        alert("Please Enter Location");
+        $("#txtLocation").focus();
+        return false;
+    }
+    if ($("#txtDescription").val() == "") {
+        alert("Please Enter Description");
+        $("#txtDescription").focus();
+        return false;
+    }
+
+    if ($("#selImage").val() == "") {
+        alert("Please Select Image");
+        $("#selImage").focus();
+        return false;
+    }
+
+
+
+    var formData = new FormData();
+    var lclFile = document.getElementById("selImage");
+    lclImage = lclFile.files[0];
+
+    formData.append("txtName", $("#txtName").val());
+    formData.append("txtDate", $("#txtDate").val());
+    formData.append("txtTime", $("#txtTime").val());
+    formData.append("txtLocation", $("#txtLocation").val());
+    formData.append("txtDescription", $("#txtDescription").val());
+    formData.append("selImage", lclImage);
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("action", "add");
+
+    // var table = $("#dataTables-example").DataTable();
+
+    $.ajax({
+        beforeSend: function () {
+            $(".btn .spinner-border").show();
+            $("#btn_add").attr("disabled", true);
+        },
+        url: "/add_events/",
+        type: "POST",
+        // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (result) {
+
+            alert("Details Added Successfully");
+            location.reload();
+            table.ajax.reload();
+            $("#add_modal").modal('hide');
+
+        },
+        error: function (request, error) {
+            console.error(error);
+        },
+        complete: function () {
+            $(".btn .spinner-border").hide();
+            $("#btn_add").attr("disabled", false);
+        },
+    });
+});
+
+
+
+ 
+$(document).ready(function () {
+
+
+    //Edit modal submit click
+    $(document).on("click", "#btn_update", function () {
+      // alert("hi");
+  
+     
+      if ($("#txtName1").val().trim().length < 1) {
+        alert("Please Enter Name");
+        $("#txtName1").focus();
+        return false;
+      }
+  
+      if ($("#txtDate1").val().trim().length < 1) {
+        alert("Please Enter Mobile Number");
+        $("#txtDate1").focus();
+        return false;
+      }
+  
+      if ($("#txtTime1").val().trim().length < 1) {
+        alert("Please Enter Email");
+        $("#txtTime1").focus();
+        return false;
+      }
+      if ($("#txtLocation1").val().trim().length < 1) {
+        alert("Please Enter Email");
+        $("#txtLocation1").focus();
+        return false;
+      }
+      if ($("#txtDescription1").val().trim().length < 1) {
+        alert("Please Enter Email");
+        $("#txtDescription1").focus();
+        return false;
+      }
+      
+     
+  
+      var formData = new FormData()
+      formData.append("txtName1", $("#txtName1").val());
+      formData.append("txtDate1", $("#txtDate1").val());
+      formData.append("txtTime1", $("#txtTime1").val());
+      formData.append("txtLocation1", $("#txtLocation1").val());
+      formData.append("txtDescription1", $("#txtDescription1").val());
+      formData.append("id", $("#edit_id").val());
+      formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+      formData.append("action", "update");
+  
+  
+      // var table = $("#dataTables-example").DataTable();
+  
+      $.ajax({
+        beforeSend: function () {
+          $(".btn .spinner-border").show();
+          $("#btn_update").attr("disabled", true);
+        },
+        url: "/add_events/",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (result) {
+          alert(" Details Updated Succesfully");
+          location.reload();
+          table.ajax.reload();
+          $("#edit_modal").modal('hide');
+        },
+        error: function (request, error) {
+          console.error(error);
+        },
+        complete: function () {
+          $(".btn .spinner-border").hide();
+          $("#btn_update").attr("disabled", false);
+        },
+      });
+    });
+  
+    //Delete work step
+    $(document).on("click", "#btn_delete", function () {
+  
+      var formData = new FormData();
+      formData.append("id", $("#delete_id").val());
+      formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+      formData.append("action", "delete");
+  
+  
+      // var table = $("#dataTables-example").DataTable();
+  
+      $.ajax({
+        beforeSend: function () {
+          $(".btn .spinner-border").show();
+        },
+  
+        url: "/add_events/",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function () {
+          alert(" Details deleted succesfully");
+          location.reload();
+          table.ajax.reload();
+          $("#delete_modal").modal('hide');
+        },
+        error: function (request, error) {
+          console.error(error);
+        },
+        complete: function () {
+          $(".btn .spinner-border").hide();
+          // Reset Form
+          //$("#view_field_form")[0].reset();
+          $(".close").click();
+        },
+      });
+    });
+  });
+  
+  function getEventData() {
+    // alert("Hi");
+    var formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("action", "getData");
+  
+  
+    $.ajax({
+  
+      url: "/add_events/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+  
+        console.log(response);
+        // $("#dataTables-example tr:gt(0)").remove();
+        for (var i = 0; i < response.length; i++) {
+          var j = i + 1;
+          let image = response[i].em_image.substring(3);
+          
+          $("#tableData").append('<tr><td>' + j + '</td><td style="display: none;">' + response[i].em_id + '</td><td>' + response[i].em_name + '</td><td>' + response[i].em_date + '</td><td>' + response[i].em_time +'</td><td>' + response[i].em_location +'</td><td>' + response[i].em_description +  '</td><td><a href="'+image+'" download>download</a></td><td><div class="d-flex" style="justify-content: space-evenly;"><a href="javascript:void(0);" id="edit_row" title="View/Edit" data-bs-toggle="modal" data-bs-target="#edit_modal"  class="text-primary" onClick="getRowsUpdate();">Edit</a><a href="javascript:void(0);" title="Delete" data-bs-toggle="modal" data-bs-target="#delete_modal" class="text-danger" id="delete_row" onClick="getRowsDelete();">Delete</a></div></td></tr>');
+        }
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+  
+      },
+    });
+  
+  }
+  
+  function getRowsUpdate() {
+    $("#tableData tr").click(function () {
+      var currentRow = $(this).closest("tr");
+      var lclID = currentRow.find("td:eq(1)").text();
+      var lclName = currentRow.find("td:eq(2)").text();
+      var lclDate = currentRow.find("td:eq(3)").text();
+      var lclTime = currentRow.find("td:eq(4)").text();
+      var lclLocation = currentRow.find("td:eq(5)").text();
+      var lclDescription = currentRow.find("td:eq(6)").text();
+
+    
+      // alert(lclID);  
+      $("#txtName1").val(lclName);
+      $("#txtDate1").val(lclDate);
+      $("#txtTime1").val(lclTime);
+      $("#txtLocation1").val(lclLocation);
+      $("#txtDescription1").val(lclDescription);
+      $("#edit_id").val(lclID);
+  
+    });
+  }
+  function getRowsDelete() {
+    $("#tableData tr").click(function () {
+      var currentRow = $(this).closest("tr");
+      var lclID = currentRow.find("td:eq(1)").text();
+      // alert(lclID);
+      $("#delete_id").val(lclID);
+  
+    });
+  }
+getEventData()
+  
